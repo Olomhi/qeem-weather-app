@@ -44,7 +44,9 @@ const WeatherApp = () => {
             onChange={(e) => setCity(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && getWeather()}
           />
-          <Button onClick={getWeather}>{loading ? "..." : "Search"}</Button>
+          <Button onClick={getWeather}>
+            {loading ? "Loading..." : "Search"}
+          </Button>
         </InputGroup>
 
         {error && <Error>{error}</Error>}
